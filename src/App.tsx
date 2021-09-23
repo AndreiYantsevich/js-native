@@ -3,22 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
+  const names = ['Dima', 'Sveta', 'Katya', 'Viktor', 'Ignat']
+  const users = [{id: 1, name: 'Dima'}, {id: 2, name: 'Andrei'}, {id: 3, name: 'Vika'}, {id: 4, name: 'Pasha'}, {id: 5, name: 'Dasha'}]
+
+  const liElements = users.map(u => <li key={u.id}>{u.name}</li>)
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {liElements}
+      </ul>
     </div>
   );
 }
